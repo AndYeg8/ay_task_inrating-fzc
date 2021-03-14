@@ -30,7 +30,8 @@
             Delete
           </router-link>
         </td>
-        <td><router-link tag="button" :to="'/User/' + user.id">
+        <td>
+          <router-link tag="button" :to="'/User/' + user.id">
             Edit
           </router-link></td>
       </tr>

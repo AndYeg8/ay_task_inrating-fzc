@@ -80,23 +80,25 @@ export default {
   },
   methods: {
 		submitHendler() {
-      this.$store.dispatch('updateUser',{
-        id: this.user.id,
-        name: this.user.name,
-        surname: this.user.surname,
-        phone: this.user.phone,
-        email: this.user.email
-      })
+      const user = {
+        name: this.name,
+        surname: this.surname,
+        phone: this.phone,
+        email: this.email,
+        id: this.id
+			}
+      this.$store.dispatch('updateUser', user)
       this.$router.push('/')
-		} ,
+		},
     deleteUser() {
-      this.$store.dispatch('deleteUser',{
-        id: this.user.id,
-        name: this.user.name,
-        surname: this.user.surname,
-        phone: this.user.phone,
-        email: this.user.email
-      })
+      const user = {
+        name: this.name,
+        surname: this.surname,
+        phone: this.phone,
+        email: this.email,
+        id: this.id
+			}
+      this.$store.dispatch('deleteUser', user)
       this.$router.push('/')
 		}
   }  

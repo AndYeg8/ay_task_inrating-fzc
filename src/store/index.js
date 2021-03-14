@@ -22,12 +22,11 @@ export default new Vuex.Store({
     },
     deleteUser(state, { id, name, surname, phone, email }) {
       const users = state.users.concat()
-      const idx = users.findIndex(u => u.id === id)
-      const user = users[idx]
-      users[idx] = { ...user, name, surname, phone, email }
-      state.users = users
-      localStorage.removeItem(JSON.stringify(state.users))
-    },
+      var idx = users.findIndex(u => u.id === id)
+      users[idx] = { id, name, surname, phone, email }
+      state.users.splice(idx, 1)
+    
+    }
   },
   actions: {
     createUser({commit}, user) {
@@ -36,8 +35,8 @@ export default new Vuex.Store({
     updateUser({commit}, user) {
       commit('updateUser', user)
     },
-    deleteUser({ commit }, user) {
-      commit('removeUser', user)
+    deleteUser({commit}, user) {
+      commit('deleteUser', user)
     }
   },
   // modules: {
