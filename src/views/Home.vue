@@ -17,10 +17,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr 
-        v-for="user of users"
-        :key="user.id"
-      >
+      <tr v-for="user of users" :key="user.id">
         <td>{{ user.name }}</td>
         <td>{{ user.surname }}</td>
         <td>{{ user.phone }}</td>
@@ -37,7 +34,7 @@
       </tr>
     </tbody>
    </table>
-   <p v-else>no users</p>
+   <p v-else>no users yet</p>
   </div>
 </template>
 

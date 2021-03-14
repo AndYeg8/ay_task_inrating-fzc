@@ -51,7 +51,6 @@
         />
       </div>
 			<button class="btn btn-success" type="submit" style="margin-right: 1rem">Edit user</button>
-     
     </form>
      <button class="btn btn-danger" type="submit" v-on:click="deleteUser">Delete user</button>
   </div>

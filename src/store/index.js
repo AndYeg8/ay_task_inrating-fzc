@@ -25,7 +25,6 @@ export default new Vuex.Store({
       var idx = users.findIndex(u => u.id === id)
       users[idx] = { id, name, surname, phone, email }
       state.users.splice(idx, 1)
-    
     }
   },
   actions: {
@@ -39,8 +38,6 @@ export default new Vuex.Store({
       commit('deleteUser', user)
     }
   },
-  // modules: {
-  // },
   getters: {
       users: s => s.users,
       userById: s=> id => s.users.find(u => u.id === id)
